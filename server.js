@@ -26,11 +26,11 @@ app.get('/', (req, res) => {
 app.get('/posts', (req, res) => {
     const apiUrl = "https://jsonplaceholder.typicode.com/posts";
     apiClient({method: "get", url: apiUrl}).then(apiRes => {
-        let body = [];
+        let posts = [];
         for(var i = 0; i < apiRes.data.length; i++){
-            body.push(apiRes.data[i]);
+            posts.push(apiRes.data[i]);
         }
-        res.render('post', {body: body});
+        res.render('post', {posts: posts});
     })
 })
 

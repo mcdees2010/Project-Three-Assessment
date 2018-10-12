@@ -1,19 +1,19 @@
 
-<div style="margin-top: 80px; margin-left: 100px;"><a href="/">HOME</a> | <a href="/posts">ALL POSTS</a></div>
+<div class="links"><a href="/">HOME</a> | <a href="/posts">ALL POSTS</a></div>
 
-<div style="margin-left: 100px;"><h1 style=>All Posts</h1></div>
+<div class="allposts"><h1 style=>All Posts</h1></div>
 
 
-<div class="container" style="margin-top: -60px; padding: 100px;">
-<table style="border: 1px solid black">
-    <tr style="border: 1px solid black">
-        <th style="border: 1px solid black">Title</th>
-        <th style="border: 1px solid black">Body</th>
+<div class="container">
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Body</th>
     </tr>
-    <% body.forEach(b => { %>
-    <tr style="border: 1px solid black">
-        <td style="border: 1px solid black"> <%= b.title %></td>
-        <td style="border: 1px solid black"> <%= b.body %> </td>
+    <% posts.forEach(b => { %>
+    <tr>
+        <td> <%= b.title %></td>
+        <td> <%= b.body %> </td>
     </tr>
     <% }) %>
 </table>
